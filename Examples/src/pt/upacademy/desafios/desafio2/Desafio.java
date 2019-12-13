@@ -8,6 +8,8 @@ public class Desafio {
 	private String singleWords[];
 	private StringBuilder seqOrdenada;
 	
+	public int ciclos = 0;
+	
 	public static String order(String string) {
 		
 		phrase = string;
@@ -16,26 +18,38 @@ public class Desafio {
 		
 		List<String> singleWords2 = Arrays.asList(singleWords);
 		
+		System.out.println(singleWords2);
+		
 			for (int i = 0; i < singleWords.length; i++) {
+//				ciclos + 1;
+//				System.out.println(ciclos);
+					
 				
-				String s = singleWords[i];
-				String clean = s.replaceAll("\\D+",""); 
-				int num = Integer.parseInt(clean);
-				System.out.println(num);
+				String s1 = singleWords[i];
+				String c1 = s1.replaceAll("\\D+",""); 
+				int num = Integer.parseInt(c1);
+				System.out.println("funciona_01");
+				System.out.println(c1);
 				
-				String sSeguinte = singleWords[+i];
-				String cleanSeguinte = sSeguinte.replaceAll("\\D+",""); 
-				int num2 = Integer.parseInt(cleanSeguinte);
-				System.out.println(num2);
+				String s2 = singleWords[i + 1];
+				String c2 = s2.replaceAll("\\D+",""); 
+				int num2 = Integer.parseInt(c2);
+				System.out.println("funciona_02");
+				System.out.println(c2);
 				
 	
 				if (num > num2) {					
 					System.out.println(i);
 					System.out.println(+i);
 					Collections.swap(singleWords2, i, +i); 
+					System.out.println("funciona_03");
+				} else {
+					System.out.println("nao fez nada");
 				}
 				
-			}		
+			}
+			
+			System.out.println(singleWords2);
 		
 		return null;
 	}
