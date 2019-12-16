@@ -13,7 +13,7 @@ abstract class EntityRepository <T extends Entity> {
 	Map<Long, T> map = new HashMap<Long, T>();
 	long nextId = 0;
 	
-	
+	// 3. da pratica 2
 	public void addEntity(T p) {
 		nextId++;
 		p.setId(nextId);
@@ -29,8 +29,7 @@ abstract class EntityRepository <T extends Entity> {
 		
 		map.put( p.getId(), p );
 	}
-	
-	
+		
 	public void removeEntity(T p) {
 		map.remove(p.getId(), p);
 	}

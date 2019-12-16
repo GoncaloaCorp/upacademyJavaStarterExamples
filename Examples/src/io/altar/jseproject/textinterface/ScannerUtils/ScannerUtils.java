@@ -1,5 +1,4 @@
 package io.altar.jseproject.textinterface.ScannerUtils;
-
 import java.util.Scanner;
 
 public class ScannerUtils {
