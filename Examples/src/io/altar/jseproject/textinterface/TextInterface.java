@@ -112,7 +112,9 @@ public class TextInterface {
 				System.out.println("Fazer - Ver Logica");
 				break;
 			case 4:
-				shelfRep.removeEntity(p);
+				long IdShelf3 = sc.getInt("mete o Id a remover");
+				Product p2 = prodRep.consultEntity(IdProd3);
+				prodRep.removeEntity(p2);
 				System.out.println("Fazer - apagar Logica");
 				break;
 			}
