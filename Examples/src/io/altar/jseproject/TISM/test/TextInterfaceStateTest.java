@@ -1,6 +1,6 @@
-package pt.upacademy.TISMJSC.test;
+package io.altar.jseproject.TISM.test;
 
-import pt.upacademy.TISMJSC.TextInterfaceState;
+import io.altar.jseproject.TISM.TextInterfaceState;
 
 public class TextInterfaceStateTest {
 

@@ -1,4 +1,4 @@
-package pt.upacademy.TISMJSC.States;
+package io.altar.jseproject.TISM.States;
 
 public class MenuInit extends State {
 

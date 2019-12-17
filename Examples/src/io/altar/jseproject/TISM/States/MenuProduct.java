@@ -1,6 +1,6 @@
-package pt.upacademy.TISMJSC.States;
+package io.altar.jseproject.TISM.States;
 
-public class MenuProduct extends State {
+public class MenuProduct extends State{
 
 	@Override
 	public int run() {

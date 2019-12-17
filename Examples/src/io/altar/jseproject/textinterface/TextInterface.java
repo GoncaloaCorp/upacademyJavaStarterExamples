@@ -51,11 +51,11 @@ public class TextInterface {
 				int v3 = sc.getInt("mete pvp"); 
 				Product product = new Product(v1, v2, v3);
 				prodRep.addEntity(product);
-//				System.out.println("Fazer - criar logica");
+//				System.out.println("Fazer - criar logica - feito");
 				break;
 			case 2:
 				long IdProd1 = sc.getInt("mete o Id a editar");
-				
+				System.out.println(prodRep.consultEntity(IdProd1));
 				Product p = prodRep.consultEntity(IdProd1);
 				
 				int vDis = sc.getInt("mete novo dis"); 
@@ -65,21 +65,19 @@ public class TextInterface {
 				int vPvp = sc.getInt("mete novo pvp"); 
 				p.setPvp(vPvp);
 								
-				prodRep.editEntity(p);
-				
-				System.out.println("Fazer - Editar Logica");
+				prodRep.editEntity(p);				
+//				System.out.println("Fazer - Editar Logica - feito");
 				break;
 			case 3:
-				long IdProd2 = sc.getInt("mete o Id a consultar");
-				
-				prodRep.consultEntity(IdProd2);
-				System.out.println("Fazer - Ver Logica");
+				long IdProd2 = sc.getInt("mete o Id a consultar");				
+				System.out.println(prodRep.consultEntity(IdProd2));			
+//				System.out.println("Fazer - Ver Logica - feito");
 				break;
 			case 4:
-				long IdProd3 = sc.getInt("mete o Id a remover");
+				long IdProd3 = sc.getInt("mete o Id product a remover");
 				Product p2 = prodRep.consultEntity(IdProd3);
-				prodRep.removeEntity(p2);
-				System.out.println("Fazer - apagar Logica");
+				prodRep.removeEntity(p2);				
+//				System.out.println("Fazer - apagar Logica - feito");
 				break;
 			}
 		} while (option != 5);
@@ -100,22 +98,32 @@ public class TextInterface {
 				int v1 = sc.getInt("mete capacidade");
 				int v2 = sc.getInt("mete preço diario");
 				Shelf shelf = new Shelf(v1, v2);				
-				shelfRep.addEntity(shelf);
-//				System.out.println("Fazer - criar logica");
+				shelfRep.addEntity(shelf);				
+//				System.out.println("Fazer - criar logica - feito");
 				break;
 			case 2:
-				shelfRep.editEntity(p);
-				System.out.println("Fazer - Editar Logica");
+				long IdShelf1 = sc.getInt("mete o Id shelf a editar");
+				System.out.println(shelfRep.consultEntity(IdShelf1));
+				Shelf s = shelfRep.consultEntity(IdShelf1);
+				
+				int vCap = sc.getInt("mete novo dis"); 
+				s.setCapacity(vCap);
+				float vDai = sc.getInt("mete novo iva"); 
+				s.setDailyPrice(vDai);
+				
+				shelfRep.editEntity(s);				
+//				System.out.println("Fazer - Editar Logica - feito");
 				break;
 			case 3:
-				shelfRep.consultEntity(id);
-				System.out.println("Fazer - Ver Logica");
+				long IdShelf2 = sc.getInt("mete o Id shelf a consultar");									
+				System.out.println(shelfRep.consultEntity(IdShelf2));
+//				System.out.println("Fazer - Ver Logica - feito");
 				break;
 			case 4:
-				long IdShelf3 = sc.getInt("mete o Id a remover");
-				Product p2 = prodRep.consultEntity(IdProd3);
-				prodRep.removeEntity(p2);
-				System.out.println("Fazer - apagar Logica");
+				long IdShelf3 = sc.getInt("mete o Id shelf a remover");
+				Shelf s2 = shelfRep.consultEntity(IdShelf3);
+				shelfRep.removeEntity(s2);				
+//				System.out.println("Fazer - apagar Logica - feito");
 				break;
 			}
 		} while (option != 5);
