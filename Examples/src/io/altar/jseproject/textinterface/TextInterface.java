@@ -1,5 +1,6 @@
 package io.altar.jseproject.textinterface;
 
+import io.altar.jseproject.business.ProductBusiness;
 import io.altar.jseproject.models.Product;
 import io.altar.jseproject.models.Shelf;
 import io.altar.jseproject.repositories.ProductRepository;

@@ -48,7 +48,6 @@ abstract class EntityRepository <T extends Entity> {
 	
 	public void printAll() {
 		Iterator<T> prodInterator = getAll().iterator();
-//		while (prodInterator.hasNext());
 		while (prodInterator.hasNext()) {
 			T product = (T) prodInterator.next();
 			System.out.println(product);
