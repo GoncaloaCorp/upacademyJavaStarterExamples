@@ -6,7 +6,7 @@ public class TextInterfaceState {
 
 	private State[] states = { 
 			new MenuInit(), 		// 0
-			new MenuProduct(), 		// 1
+			new MenuProducts(), 		// 1
 			new ProductAdd(),		// 2
 			new MenuShelves() }; 	// 3
 	// 4. transitions
