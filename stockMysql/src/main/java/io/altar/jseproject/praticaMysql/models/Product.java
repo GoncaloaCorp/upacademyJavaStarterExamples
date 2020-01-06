@@ -1,5 +1,6 @@
 package io.altar.jseproject.praticaMysql.models;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -15,7 +16,7 @@ import javax.persistence.OneToMany;
 	@NamedQuery(name = Product.GET_ALL_PRODUCTS_IDS, query = "SELECT p.id FROM Product p"),
 	@NamedQuery(name = Product.GET_PRODUCTS_COUNT, query = "SELECT COUNT(p.id) FROM Product p")
 })
-public class Product extends Entity_ {
+public class Product extends Entity_  implements Serializable{
 
 	public static final String GET_ALL_PRODUCTS = "getAllProducts";
 	public static final String GET_ALL_PRODUCTS_IDS = "getAllProductsIds";
@@ -33,6 +34,7 @@ public class Product extends Entity_ {
 		return "Product";
 	}
 
+//	SHELVES
 	public List<Shelf> getShelves() {
 		return shelves;
 	}
@@ -41,6 +43,7 @@ public class Product extends Entity_ {
 		this.shelves = shelves;
 	}
 
+//	DISCOUNT
 	public int getDiscount() {
 		return discount;
 	}
@@ -49,6 +52,7 @@ public class Product extends Entity_ {
 		this.discount = discount;
 	}
 
+//	IVA
 	public int getIva() {
 		return iva;
 	}
@@ -57,6 +61,7 @@ public class Product extends Entity_ {
 		this.iva = iva;
 	}
 
+//	PVP
 	public float getPvp() {
 		return pvp;
 	}

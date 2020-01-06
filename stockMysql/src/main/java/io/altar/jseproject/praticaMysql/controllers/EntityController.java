@@ -1,6 +1,5 @@
 package io.altar.jseproject.praticaMysql.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;

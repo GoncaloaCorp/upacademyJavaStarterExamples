@@ -8,7 +8,7 @@
 		transaction-type="JTA">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<!-- Implementação do JPA -->
-		<jta-data-source>java:/MySqlDS</jta-data-source>
+		<jta-data-source>java:/MySqlDS2</jta-data-source>
 
 		<properties>
 			<!-- Propriedades JDBC -->

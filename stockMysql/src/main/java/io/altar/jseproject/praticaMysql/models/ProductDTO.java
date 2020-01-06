@@ -5,8 +5,6 @@ import java.util.List;
 
 public class ProductDTO {
 
-	private static final long serialVersionUID = 1L;
-
 	private List<Long> shelfIds = new ArrayList<Long>();
 	private int discount;
 	private int iva;
@@ -22,6 +20,7 @@ public class ProductDTO {
 		this.pvp = pvp;
 	}
 
+//	SHELVES
 	public List<Long> getShelfIds() {
 		return shelfIds;
 	}
@@ -30,6 +29,7 @@ public class ProductDTO {
 		this.shelfIds = shelfIds;
 	}
 
+//	DISCOUNT
 	public int getDiscount() {
 		return discount;
 	}
@@ -38,6 +38,7 @@ public class ProductDTO {
 		this.discount = discount;
 	}
 
+//	IVA
 	public int getIva() {
 		return iva;
 	}
@@ -46,6 +47,7 @@ public class ProductDTO {
 		this.iva = iva;
 	}
 
+//	PVP
 	public float getPvp() {
 		return pvp;
 	}
