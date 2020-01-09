@@ -9,7 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import io.altar.jseproject.praticaMysql.models.Shelf;
-import io.altar.jseproject.praticaMysql.models.ShelfDTO;
+import io.altar.jseproject.praticaMysql.models.DTOs.ShelfDTO;
 import io.altar.jseproject.praticaMysql.repositories.ShelfRepository;
 import io.altar.jseproject.praticaMysql.services.ShelfService;
 

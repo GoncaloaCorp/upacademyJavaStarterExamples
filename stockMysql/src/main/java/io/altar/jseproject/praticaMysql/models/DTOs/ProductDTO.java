@@ -1,11 +1,11 @@
-package io.altar.jseproject.praticaMysql.models;
+package io.altar.jseproject.praticaMysql.models.DTOs;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDTO {
 
-	private List<Long> shelfIds = new ArrayList<Long>();
+	private List<Long> shelvesIds = new ArrayList<Long>();
 	private int discount;
 	private int iva;
 	private float pvp;
@@ -13,8 +13,8 @@ public class ProductDTO {
 	public ProductDTO() {
 	}
 
-	public ProductDTO(List<Long> shelfIds, int discount, int iva, float pvp) {
-		this.shelfIds = shelfIds;
+	public ProductDTO(List<Long> shelvesIds, int discount, int iva, float pvp) {
+		this.shelvesIds = shelvesIds;
 		this.discount = discount;
 		this.iva = iva;
 		this.pvp = pvp;
@@ -22,11 +22,11 @@ public class ProductDTO {
 
 //	SHELVES
 	public List<Long> getShelfIds() {
-		return shelfIds;
+		return shelvesIds;
 	}
 
-	public void setShelfIds(List<Long> shelfIds) {
-		this.shelfIds = shelfIds;
+	public void setShelfIds(List<Long> shelvesIds) {
+		this.shelvesIds = shelvesIds;
 	}
 
 //	DISCOUNT

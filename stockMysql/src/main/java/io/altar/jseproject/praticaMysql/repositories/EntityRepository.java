@@ -26,18 +26,22 @@ public abstract class EntityRepository<T extends Entity_> {
 		return entityManager.createNamedQuery(getAllEntities(), getEntityClass()).getResultList();
 	}
 	
-	public Long addEntity(T entity) {
-		return entityManager.merge(entity).getId();
-	}
-
+//	protected abstract int getProductsCount();  //CRIAR CONTAGEM DE PRODUTOS
+	
+	
+//	GET
 	public T getEntity(long id) {
 		return entityManager.find(getEntityClass(), id);
 	}
-
+//	ADD
+	public Long addEntity(T entity) {
+		return entityManager.merge(entity).getId();
+	}
+//	EDIT
 	public T editEntity(T entity) {
 		return entityManager.merge(entity);
 	}
-
+//	REMOVE
 	public void removeEntity(long id) {
 		T entity = getEntity(id);
 		if(entity != null) {

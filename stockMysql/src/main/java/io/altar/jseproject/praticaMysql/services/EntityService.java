@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 
 import io.altar.jseproject.praticaMysql.models.Entity_;
 import io.altar.jseproject.praticaMysql.repositories.EntityRepository;
@@ -29,17 +30,20 @@ public abstract class EntityService<R extends EntityRepository<E>,E extends Enti
 		return repository.getAll();
 	}
 
+	@Transactional
 	@Override
 	public long create(E entity) {
 		return repository.addEntity(entity);
 	}
 
+	@Transactional
 	@Override
 	public void update(E entity) {
 		validEntity(entity.getId());
 		repository.editEntity(entity);
 	}
 
+//	@Transactional
 	@Override
 	public void delete(long id) {
 		repository.removeEntity(id);

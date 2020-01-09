@@ -46,9 +46,13 @@ public abstract class EntityController<S extends EntityService<R,E>,R extends En
 	
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
-	public long save(E entity) {
-		long currentId = service.create(entity);
-		return currentId;
+	public Response save(E entity) {
+		try {
+			long currentId = service.create(entity);
+			return Response.status(200).entity(currentId).build();
+		} catch (Exception e) {
+			return Response.status(400).entity(e.getMessage()).build();
+		}
 	}
 	
 	@POST

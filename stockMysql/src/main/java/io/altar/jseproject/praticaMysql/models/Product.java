@@ -16,6 +16,7 @@ import javax.persistence.OneToMany;
 	@NamedQuery(name = Product.GET_ALL_PRODUCTS_IDS, query = "SELECT p.id FROM Product p"),
 	@NamedQuery(name = Product.GET_PRODUCTS_COUNT, query = "SELECT COUNT(p.id) FROM Product p")
 })
+
 public class Product extends Entity_  implements Serializable{
 
 	public static final String GET_ALL_PRODUCTS = "getAllProducts";

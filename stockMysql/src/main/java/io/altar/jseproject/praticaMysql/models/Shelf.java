@@ -13,7 +13,9 @@ import javax.persistence.NamedQuery;
 		@NamedQuery(name = Shelf.GET_SHELVES_COUNT, query = "SELECT COUNT(p.id) FROM Shelf p"),
 		@NamedQuery(name = Shelf.GET_SHELVES_BY_PRODUCT_ID, query = "SELECT s FROM Shelf s WHERE s.product.id = :productId"),
 		@NamedQuery(name = Shelf.GET_EMPTY_SHELVES, query = "SELECT s FROM Shelf s WHERE s.product = null"),
-		@NamedQuery(name = Shelf.SHELVES_PRODUCT_TO_NULL, query = "UPDATE Shelf s SET s.product = null WHERE s.product.id = :productId") })
+		@NamedQuery(name = Shelf.SHELVES_PRODUCT_TO_NULL, query = "UPDATE Shelf s SET s.product = null WHERE s.product.id = :productId") 
+})
+
 public class Shelf extends Entity_  implements Serializable{
 
 	public static final String GET_ALL_SHELVES = "getAllShelves";

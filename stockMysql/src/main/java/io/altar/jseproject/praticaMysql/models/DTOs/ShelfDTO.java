@@ -1,4 +1,4 @@
-package io.altar.jseproject.praticaMysql.models;
+package io.altar.jseproject.praticaMysql.models.DTOs;
 
 public class ShelfDTO {
 
