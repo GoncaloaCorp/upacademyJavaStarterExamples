@@ -32,12 +32,13 @@ public class ProductService extends EntityService<ProductRepository, Product> im
 		repository.editEntity(entity);
 	}
 
-//	@Override
-//	public void delete(long id) {
-//		if (id != 0) {
-//			List<Long> allIds = getAllIds();
-//		}
-//		repository.removeEntity(id);
-//	}
+	@Override
+	public void delete(long id) {
+		
+		if (repository.getEntity(id) == null) {
+			throw new RuntimeException("O produto que estás a tentar atualizar não existe");
+		}
+		repository.removeEntity(id);
+	}
 	
 }
